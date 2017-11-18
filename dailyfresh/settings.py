@@ -97,9 +97,9 @@ AUTH_USER_MODEL = 'user.User'
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh-hans'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
@@ -149,3 +149,12 @@ SESSION_CACHE_ALIAS = "default"
 
 # 设置登录默认url
 LOGIN_URL = '/user/login'
+
+# 配置文件存储类
+DEFAULT_FILE_STORAGE = 'utils.fdfs.storage.FDFSStorage'
+
+# 设置fast dfs客户端配置文件路径
+FDFS_CLIENT_CONF = './utils/fdfs/client.conf'
+
+# 设置fast dfs文件存储服务器上的nginx的ip和端口号
+FDFS_URL = 'http://192.168.23.152:8888/'
